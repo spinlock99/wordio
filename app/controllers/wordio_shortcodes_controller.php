@@ -42,10 +42,11 @@
           $_POST['wordio_text']
         );
       } catch (Services_Twilio_RestException $e) {
+        $caught_exception = true;
         echo $e->getMessage();
+        echo "<a href='#'>OK</a>";
       }
-
-      include(WORDIO_BASE_DIR . "/app/views/shortcodes/show.php");
+      if (!$caught_exception) include(WORDIO_BASE_DIR . "/app/views/shortcodes/show.php");
     } else {
       wp_die("Nonce Not Recognized", "Wordio Nonce");
     }
