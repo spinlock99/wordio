@@ -24,5 +24,6 @@ if (is_admin()) {
 } else {
   require_once(WORDIO_BASE_DIR . '/app/controllers/wordio_shortcodes_controller.php');
   $shortcodeController = new WordioShortcodesController;
+  require_once(WORDIO_BASE_DIR . '/lib/twilio-php-master/Services/Twilio.php');
 }
 ?>
