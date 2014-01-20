@@ -44,12 +44,7 @@
       } catch (Services_Twilio_RestException $e) {
         $caught_exception = true;
         echo $e->getMessage();
-        echo "<a href='#'>OK</a>";
-        echo <<<BUTTON
-<FORMM>
-<INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh">
-</FORM>
-BUTTON;
+        echo "</br><form><input type='button' onClick='history.go(0)' value='OK'></form>"
       }
       if (!$caught_exception) include(WORDIO_BASE_DIR . "/app/views/shortcodes/show.php");
     } else {
