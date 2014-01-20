@@ -35,11 +35,15 @@
         $twilio_options['auth_token']
       );
 
-      $sms = $client->account->sms_messages->create(
-        $twilio_options['from_number'],
-        $twilio_options['to_number'],
-        $_POST['wordio_text']
-      );
+      try {
+        $sms = $client->account->sms_messages->create(
+          $twilio_options['from_number'],
+          $twilio_options['to_number'],
+          $_POST['wordio_text']
+        );
+      } catch (Services_Twilio_RestException $e) {
+        echo $e->getMessage();
+      }
 
       include(WORDIO_BASE_DIR . "/app/views/shortcodes/show.php");
     } else {
