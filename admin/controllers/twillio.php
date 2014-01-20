@@ -15,6 +15,7 @@
   }
 
   public function render_options_page() {
+    $twilio_options = get_options('twilio_settings');
     include(WORDIO_BASE_DIR . '/admin/views/twilio/options_page.php');
   }
 } ?>
