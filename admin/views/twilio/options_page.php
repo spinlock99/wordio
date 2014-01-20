@@ -2,7 +2,6 @@
   <h2>Twillio Settings</h2>
   <form method="post" action="options.php">
     <?php settings_fields('twilio_settings_group'); ?>
-    <?php do_settings_sections('twilio_settings_group'); ?>
     <table class="form-table">
       <tr><th>Account SID</th><td>
       <input name="twilio_settings[account_sid]" type="text" class="regular-text" value="<?php
