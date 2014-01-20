@@ -1,4 +1,4 @@
-<div class='dialog app' title='<h1>Thank You!</h1>'>
+<div class='dialog app' title='<center><h1>Thank You!</h1></center>'>
   <div class='panel'>
     <form id='success'>
       <article>
