@@ -36,7 +36,7 @@
       $sms = $client->account->sms_messages->create(
         "510-984-3435", // From this number
         "510-847-6279", // To this number
-        "Test message Sucka!"
+        $_POST['wordio_text']
       );
 
       include(WORDIO_BASE_DIR . "/app/views/shortcodes/show.php");
