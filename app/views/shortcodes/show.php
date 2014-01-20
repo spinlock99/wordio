@@ -2,7 +2,9 @@
   <div class='panel'>
     <form id='success'>
       <article>
-        <h2>Message Sent</h2>
+        <strong>Your Message:</strong></br>
+        <?php $_POST['wordio_text']; ?>
+        <strong>Has Been Sent</strong>
       </article>
       <footer>
         <button id='success-submit' class='blue submit'>
