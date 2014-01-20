@@ -1,4 +1,4 @@
-<div class="dialog app">
+<div class="dialog app" title="Send Us a Text">
   <div class="panel">
     <form method="post">
       <article>
@@ -10,9 +10,9 @@
         />
       </article>
       <footer>
-        <p class="submit">
-          <input type="submit" class="button-primary" value="Send Text"/>
-        </p>
+        <button id='submit' class='blue submit'>
+          <span>Send</span>
+        </button>
       </footer>
     </form>
   </div>
