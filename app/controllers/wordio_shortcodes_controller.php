@@ -29,13 +29,15 @@
     DebugModel::debug('WordioShortcodesController::post');
     if (wp_verify_nonce($_POST['wordio_nonce'], 'wordio-nonce')) {
       DebugModel::debug($_POST);
-      $account_sid = "AC8ff3fc76a39bb33c21fe2682c6c444fd";
-      $auth_token = "ce10db18423c8f5cb2649aaba560835b";
-      $client = new Services_Twilio($account_sid, $auth_token);
+      $twilio_options = get_option('twilio_settings');
+      $client = new Services_Twilio(
+        $twilio_options['account_sid'],
+        $twilio_options['auth_token']
+      );
 
       $sms = $client->account->sms_messages->create(
-        "510-984-3435", // From this number
-        "510-847-6279", // To this number
+        $twilio_options['from_number'],
+        $twilio_options['to_number'],
         $_POST['wordio_text']
       );
 
