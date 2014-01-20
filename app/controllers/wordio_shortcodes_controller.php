@@ -26,6 +26,6 @@
   }
 
   public function post() {
-    //process the form
+    DebugModel::debug('WordioShortcodesController::post');
   }
 } ?>
