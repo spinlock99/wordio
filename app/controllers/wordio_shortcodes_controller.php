@@ -1,6 +1,7 @@
 <?php class WordioShortcodesController {
   public function __construct() {
     add_shortcode('wordio', array($this, 'route'));
+    add_action('wp_enqueue_scripts', array($this, 'load_scripts'));
   }
 
   public function route($shortcode_attributes, $content=null) {
@@ -12,6 +13,15 @@
     default:
       wp_die("{$_SERVER['REQUEST_METHOD']} not supported by Wordio", "Wordio Route");
     }
+  }
+
+  public function load_scripts() {
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('jquery-ui');
+    wp_enqueue_script('jquery-ui-dialog');
+    wp_enqueue_script('shortcodes', WORDIO_URL . '/app/assets/javascripts/shortcodes.js');
+    wp_register_style('lightbox', WORDIO_URL . '/app/assets/stylesheets/lightbox.css');
+    wp_enqueue_style('lightbox');
   }
 
   public function get($shortcode_attributes) {
