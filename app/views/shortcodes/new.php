@@ -1,4 +1,4 @@
-<div class="dialog app" title="Send Us a Text">
+<div class="dialog app" title="<h1>Send Us a Text</h1>">
   <div class="panel">
     <form method="post">
       <article>
