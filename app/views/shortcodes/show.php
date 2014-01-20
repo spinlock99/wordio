@@ -3,7 +3,7 @@
     <form id='success'>
       <article>
         <strong>Your Message:</strong></br>
-        <?php $_POST['wordio_text']; ?>
+        <?php echo $_POST['wordio_text']; ?>
         <strong>Has Been Sent</strong>
       </article>
       <footer>
