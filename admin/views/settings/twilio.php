@@ -12,7 +12,7 @@
         </td>
       </tr>
 -->
-      <?php Formidable::text("Account SID", "twilio_settings[account_sid]", $twilio_settings['account_sid'] ); ?>
+      <?php echo Formidable::text("Account SID", "twilio_settings[account_sid]", $twilio_settings['account_sid'] ); ?>
       <tr>
         <th>Auth Token</th>
         <td>
