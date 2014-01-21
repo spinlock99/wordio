@@ -20,8 +20,8 @@
     wp_enqueue_script('jquery-ui');
     wp_enqueue_script('jquery-ui-dialog');
     wp_enqueue_script('shortcodes', WORDIO_BASE_URL . '/app/assets/javascripts/shortcodes.js');
-    wp_register_style('lightbox', WORDIO_BASE_URL . '/app/assets/stylesheets/lightbox.css');
-    wp_enqueue_style('lightbox');
+    wp_register_style('shortcodes', WORDIO_BASE_URL . '/app/assets/stylesheets/shortcodes.css');
+    wp_enqueue_style('shortcodes');
   }
 
   public function get($shortcode_attributes) {
