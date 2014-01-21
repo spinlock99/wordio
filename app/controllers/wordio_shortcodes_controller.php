@@ -56,7 +56,7 @@
         echo $e->getMessage();
         echo "</br><form><input type='button' onClick='history.go(0)' value='OK'></form>";
       }
-      if (!$caught_exception) include(WORDIO_BASE_DIR . "/app/views/shortcodes/show.php");
+      if (!isset($caught_exception)) include(WORDIO_BASE_DIR . "/app/views/shortcodes/show.php");
     } else {
       wp_die("Nonce Not Recognized", "Wordio Nonce");
     }
