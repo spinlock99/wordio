@@ -5,22 +5,22 @@
     <table class="form-table">
       <tr><th>Account SID</th><td>
       <input name="twilio_settings[account_sid]" type="text" class="regular-text" value="<?php
-        echo(isset($twilio_options['account_sid']) ? $twilio_options['account_sid'] : '' );?>"/>
+        echo(isset($twilio_settings['account_sid']) ? $twilio_settings['account_sid'] : '' );?>"/>
       </td></tr>
       <tr><th>Auth Token</th><td>
       <input name="twilio_settings[auth_token]" type="text" class="regular-text" value="<?php
-        echo(isset($twilio_options['auth_token']) ? $twilio_options['auth_token'] : '');?>"/>
+        echo(isset($twilio_settings['auth_token']) ? $twilio_settings['auth_token'] : '');?>"/>
       </td></tr>
       <tr><th>From Number</th><td>
       <input name="twilio_settings[from_number]" type="text" class="regular-text" value="<?php
-        echo(isset($twilio_options['from_number']) ? $twilio_options['from_number'] : '');?>"/>
+        echo(isset($twilio_settings['from_number']) ? $twilio_settings['from_number'] : '');?>"/>
       <label class="description" for="twilio_settings[from_number]">
         The Twilio number that the texts will be sent from.
       </label>
       </td></tr>
       <tr><th>To Number</th><td>
       <input name="twilio_settings[to_number]" type="text" class="regular-text" value="<?php
-        echo(isset($twilio_options['to_number']) ? $twilio_options['to_number'] : '');?>"/>
+        echo(isset($twilio_settings['to_number']) ? $twilio_settings['to_number'] : '');?>"/>
       <label class="description" for="twilio_settings[to_number]">
         The number for the text enabled device that texts will be sent to.
       </label>

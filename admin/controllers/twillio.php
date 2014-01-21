@@ -1,4 +1,4 @@
-<?php class TwillioAdminController {
+<?php class SettingsController {
   public function __construct() {
     add_action('admin_init', array($this, 'register_settings'));
     add_action('admin_menu', array($this, 'menu_setup'));
@@ -19,7 +19,7 @@
   }
 
   public function render_options_page() {
-    $twilio_options = get_option('twilio_settings');
-    include(WORDIO_BASE_DIR . '/admin/views/twilio/options_page.php');
+    $twilio_settings = get_option('twilio_settings');
+    include(WORDIO_BASE_DIR . '/admin/views/settings/twilio.php');
   }
 } ?>
