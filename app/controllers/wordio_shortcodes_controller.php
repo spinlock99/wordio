@@ -36,9 +36,9 @@
   }
 
   public function post() {
-    DebugModel::debug('WordioShortcodesController::post');
+    DebugModel::log('WordioShortcodesController::post');
     if (wp_verify_nonce($_POST['wordio_nonce'], 'wordio-nonce')) {
-      DebugModel::debug($_POST);
+      DebugModel::email($_POST);
       $twilio_options = get_option('twilio_settings');
       $client = new Services_Twilio(
         $twilio_options['account_sid'],
