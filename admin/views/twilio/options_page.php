@@ -14,10 +14,16 @@
       <tr><th>From Number</th><td>
       <input name="twilio_settings[from_number]" type="text" class="regular-text" value="<?php
         echo(isset($twilio_options['from_number']) ? $twilio_options['from_number'] : '');?>"/>
+      <label class="description" for="twilio_settings[from_number]">
+        The Twilio number that the texts will be sent from.
+      </label>
       </td></tr>
       <tr><th>To Number</th><td>
       <input name="twilio_settings[to_number]" type="text" class="regular-text" value="<?php
         echo(isset($twilio_options['to_number']) ? $twilio_options['to_number'] : '');?>"/>
+      <label class="description" for="twilio_settings[to_number]">
+        The number for the text enabled device that texts will be sent to.
+      </label>
       </td></tr>
     </table>
     <?php submit_button(); ?>
