@@ -1,4 +1,4 @@
-<div class="dialog app" title="<h1><?php echo $title; ?></h1></br><h2><?php echo $description; ?></h2>">
+<div class="dialog app" title="<center><h1><?php echo $title; ?></h1></br><h2><?php echo $description; ?></h2></center>">
   <div class="panel">
     <form method="post">
       <article>
