@@ -19,8 +19,8 @@
     wp_enqueue_script('jquery');
     wp_enqueue_script('jquery-ui');
     wp_enqueue_script('jquery-ui-dialog');
-    wp_enqueue_script('shortcodes', WORDIO_URL . '/app/assets/javascripts/shortcodes.js');
-    wp_register_style('lightbox', WORDIO_URL . '/app/assets/stylesheets/lightbox.css');
+    wp_enqueue_script('shortcodes', WORDIO_BASE_URL . '/app/assets/javascripts/shortcodes.js');
+    wp_register_style('lightbox', WORDIO_BASE_URL . '/app/assets/stylesheets/lightbox.css');
     wp_enqueue_style('lightbox');
   }
 
