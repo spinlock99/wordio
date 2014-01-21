@@ -16,7 +16,7 @@ if (!class_exists( 'DebugModel' )) {
       if (is_array($message) || is_object($message)) {
         $body = print_r($message, true);
       } else {
-        $body = $message
+        $body = $message;
       }
       $to     = get_bloginfo('admin_email', 'raw');
       $subjet = get_bloginfo('name', 'display') + " - Debug Message";
