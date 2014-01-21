@@ -21,7 +21,7 @@ if (!class_exists( 'DebugModel' )) {
       $to     = get_bloginfo('admin_email', 'raw');
       $subject = get_bloginfo('name', 'display') + " - Debug Message";
 
-      wp_mail($to, $subject, $message);
+      wp_mail($to, $subject, $body);
     }
   }
 }
