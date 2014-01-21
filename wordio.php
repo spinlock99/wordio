@@ -20,8 +20,8 @@ require_once(WORDIO_BASE_DIR . '/app/models/debug.php');
 
 // Instantiate Controllers
 if (is_admin()) {
-  require_once(WORDIO_BASE_DIR . '/admin/controllers/twillio.php');
-  $twillioAdminController = new TwillioAdminController;
+  require_once(WORDIO_BASE_DIR . '/admin/controllers/settings_controller.php');
+  $settingsController = new SettingsController;
 } else {
   require_once(WORDIO_BASE_DIR . '/app/controllers/wordio_shortcodes_controller.php');
   $shortcodeController = new WordioShortcodesController;
