@@ -18,8 +18,6 @@ if (!defined('WORDIO_BASE_DIR')) {
 // Instantiate Controllers
 require_once(WORDIO_BASE_DIR . '/admin/controllers/twillio.php');
 $twillioAdminController = new TwillioAdminController;
-add_action('admin_init', array($twillioAdminController, 'register_settings'));
-add_action('admin_menu', array($twillioAdminController, 'menu_setup'));
 require_once(WORDIO_BASE_DIR . '/app/controllers/wordio_shortcodes_controller.php');
 $shortcodeController = new WordioShortcodesController;
 require_once(WORDIO_BASE_DIR . '/lib/twilio-php-master/Services/Twilio.php');

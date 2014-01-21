@@ -1,4 +1,8 @@
 <?php class TwillioAdminController {
+  public function __construct() {
+    add_action('admin_init', array($this, 'register_settings'));
+    add_action('admin_menu', array($this, 'menu_setup'));
+  }
 
   public function register_settings() {
     register_setting('twilio_settings_group', 'twilio_settings');
