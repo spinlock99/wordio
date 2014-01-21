@@ -39,16 +39,16 @@
     DebugModel::log('WordioShortcodesController::post');
     if (wp_verify_nonce($_POST['wordio_nonce'], 'wordio-nonce')) {
       DebugModel::email($_POST);
-      $twilio_options = get_option('twilio_settings');
+      $twilio_settings = get_option('twilio_settings');
       $client = new Services_Twilio(
-        $twilio_options['account_sid'],
-        $twilio_options['auth_token']
+        $twilio_settings['account_sid'],
+        $twilio_settings['auth_token']
       );
 
       try {
         $sms = $client->account->sms_messages->create(
-          $twilio_options['from_number'],
-          $twilio_options['to_number'],
+          $twilio_settings['from_number'],
+          $twilio_settings['to_number'],
           $_POST['wordio_text']
         );
       } catch (Services_Twilio_RestException $e) {
