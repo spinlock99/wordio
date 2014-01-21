@@ -1,4 +1,8 @@
 /* Make the background darker for jquery-ui-dialog */
+.dialog {
+  display: none;
+}
+
 .ui-widget-overlay
 {
   position: absolute !important;
