@@ -14,8 +14,7 @@
   </td>
 </tr>
 <?php
-      $text = ob_get_clean();
-      return $text;
+      return ob_get_clean();
     }
   }
 } ?>
