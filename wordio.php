@@ -17,6 +17,7 @@ if (!defined('WORDIO_BASE_DIR')) {
 }
 
 require_once(WORDIO_BASE_DIR . '/app/models/debug.php');
+require_once(WORDIO_BASE_DIR . '/lib/formidable/formidable.php');
 
 // Instantiate Controllers
 if (is_admin()) {
