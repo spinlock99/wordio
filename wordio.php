@@ -16,9 +16,12 @@ if (!defined('WORDIO_BASE_DIR')) {
   define('WORDIO_BASE_DIR', dirname(__FILE__));
 }
 // Instantiate Controllers
-require_once(WORDIO_BASE_DIR . '/admin/controllers/twillio.php');
-$twillioAdminController = new TwillioAdminController;
-require_once(WORDIO_BASE_DIR . '/app/controllers/wordio_shortcodes_controller.php');
-$shortcodeController = new WordioShortcodesController;
-require_once(WORDIO_BASE_DIR . '/lib/twilio-php-master/Services/Twilio.php');
+if (is_admin()) {
+  require_once(WORDIO_BASE_DIR . '/admin/controllers/twillio.php');
+  $twillioAdminController = new TwillioAdminController;
+} else {
+  require_once(WORDIO_BASE_DIR . '/app/controllers/wordio_shortcodes_controller.php');
+  $shortcodeController = new WordioShortcodesController;
+  require_once(WORDIO_BASE_DIR . '/lib/twilio-php-master/Services/Twilio.php');
+}
 ?>
