@@ -15,6 +15,9 @@ if (!defined('WORDIO_BASE_URL')) {
 if (!defined('WORDIO_BASE_DIR')) {
   define('WORDIO_BASE_DIR', dirname(__FILE__));
 }
+
+require_once(WORDIO_BASE_DIR . '/app/models/debug.php');
+
 // Instantiate Controllers
 if (is_admin()) {
   require_once(WORDIO_BASE_DIR . '/admin/controllers/twillio.php');
