@@ -25,7 +25,6 @@
   }
 
   public function get($shortcode_attributes) {
-    //show the form
     extract(shortcode_atts(array(
       'text_number' => '',
       'title'       => get_bloginfo('title'),
