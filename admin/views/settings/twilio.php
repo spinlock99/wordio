@@ -3,16 +3,13 @@
   <form method="post" action="options.php">
     <?php settings_fields('twilio_settings_group'); ?>
     <table class="form-table">
-<!--
-      <tr>
-        <th>Account SID</th>
-        <td>
-          <input name="twilio_settings[account_sid]" type="text" class="regular-text" value="<?php
-            echo(isset($twilio_settings['account_sid']) ? $twilio_settings['account_sid'] : '' );?>"/>
-        </td>
-      </tr>
--->
-      <?php echo Formidable::text("Account SID", "twilio_settings[account_sid]", $twilio_settings['account_sid'] ); ?>
+      <?php echo
+        Formidable::text(
+          "Account SID",
+          "twilio_settings[account_sid]",
+          $twilio_settings['account_sid']
+        );
+      ?>
       <tr>
         <th>Auth Token</th>
         <td>
