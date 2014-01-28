@@ -4,7 +4,7 @@ Donate link: https://atomicbroadcast.net/
 Tags: text, twilio
 Requires at least: 3.0.1
 Tested up to: 3.4
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,3 +34,6 @@ device that texts will be sent to. Standard messaging rates apply.
 
 = 0.1 =
 Initial version.
+
+= 0.2 =
+Updated UI/UX
