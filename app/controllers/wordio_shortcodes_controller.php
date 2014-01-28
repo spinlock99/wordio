@@ -22,7 +22,7 @@
       'description' => get_bloginfo('description'),
     ), $shortcode_attributes));
 
-    include("{WORDIO_BASE_DIR}/app/views/shortcodes/wordio.php");
+    include(WORDIO_BASE_DIR . "/app/views/shortcodes/wordio.php");
   }
 
   public function post() {
