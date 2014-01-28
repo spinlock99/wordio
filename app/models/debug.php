@@ -1,7 +1,7 @@
 <?php
 // Don't redeclare the Class if it already exists.
-if (!class_exists( 'DebugModel' )) {
-  class DebugModel{
+if (!class_exists( 'Debug' )) {
+  class Debug{
     public function log($message) {
       if (WP_DEBUG_LOG === true) {
         if (is_array($message) || is_object($message)) {
