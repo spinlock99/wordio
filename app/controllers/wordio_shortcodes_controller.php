@@ -27,5 +27,10 @@
 
   public function post() {
     DebugModel::debug('WordioShortcodesController::post');
+    if (wp_verify_nonce($_POST['wordio_nonce'], 'wordio-nonce')) {
+
+    } else {
+      wp_die("Nonce Not Recognized", "Wordio Nonce");
+    }
   }
 } ?>
