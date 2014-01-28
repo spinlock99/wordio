@@ -15,6 +15,6 @@
   }
 
   public function render_options_page() {
-    include(WORDIO_BASE_DIR . '/admin/view/twillio/options_page.php');
+    include(WORDIO_BASE_DIR . '/admin/views/twillio/options_page.php');
   }
 } ?>
