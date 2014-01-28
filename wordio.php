@@ -1,4 +1,13 @@
 <?php
+/*
+ * Plugin Name: Wordio
+ * Plugin URI: https://atomicbroadcast.net/
+ * Description: A simple plugin that lets anyone send you a text.
+ * Author: Andrew Dixon
+ * Author URI: https://atomicbroadcast.net/
+ * Version: 0.1
+ */
+
 // Constants and Globals
 if (!defined('WORDIO_BASE_URL')) {
   define('WORDIO_BASE_URL', plugin_dir_url(__FILE__));
