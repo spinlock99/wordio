@@ -5,7 +5,7 @@
  * Description: A simple plugin that lets anyone send you a text.
  * Author: Andrew Dixon
  * Author URI: https://atomicbroadcast.net/
- * Version: 0.1
+ * Version: 0.2
  */
 
 // Constants and Globals
